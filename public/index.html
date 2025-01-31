@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="2c717123-f877-4c44-bc09-89ff15cc2bff" data-section-id="2c717123-f877-4c44-bc09-89ff15cc2bff">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="#hero" class="text-xl font-bold">Harsha Vardhan</a>
+        </div>
+        
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#about" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="#skills" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+            <a href="#experience" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+            <a href="#projects" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+            <a href="#certifications" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
+            <a href="#contact" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path id="menu-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#about" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#skills" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+        <a href="#experience" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+        <a href="#projects" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+        <a href="#certifications" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+        <a href="#contact" class="hover:bg-neutral-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.getElementsByTagName('a');
+    for (const link of mobileLinks) {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    }
+  </script>
+</div>
+</htmlCode></element><element id="b65e8d3c-e174-4b3c-8159-bff2d7975014" data-section-id="b65e8d3c-e174-4b3c-8159-bff2d7975014">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="min-h-screen pt-16 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center h-[calc(100vh-4rem)]">
+      <div class="text-center md:text-left md:w-1/2 animate__animated animate__fadeInLeft">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Valiveti Prudhivi <br/>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+            Harsha Vardhan Gupta
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-6">
+          Full Stack Developer & Data Engineer
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+          <a href="#contact" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-300">
+            Contact Me
+          </a>
+          <a href="#projects" class="inline-block px-8 py-3 border-2 border-blue-600 hover:bg-blue-600/20 rounded-full transition-colors duration-300">
+            View Projects
+          </a>
+        </div>
+        <div class="mt-8 flex gap-4 justify-center md:justify-start">
+          <div class="animate__animated animate__fadeIn animate__delay-1s">
+            <span class="block text-gray-400">📍 Location</span>
+            <span>Pedaparimi, Guntur, AP</span>
+          </div>
+          <div class="animate__animated animate__fadeIn animate__delay-1s">
+            <span class="block text-gray-400">📧 Email</span>
+            <a href="mailto:valivetiharsha328@gmail.com" class="hover:text-blue-400">valivetiharsha328@gmail.com</a>
+          </div>
+        </div>
+        <div class="mt-4 flex gap-4 justify-center md:justify-start animate__animated animate__fadeIn animate__delay-2s">
+          <a href="tel:+919182089972" class="hover:text-blue-400">📞 +91 9182089972</a>
+          <a href="https://www.linkedin.com/in/valiveti-prudhivi-harsha-vardhan-056ba9233" target="_blank" class="hover:text-blue-400">
+            🔗 LinkedIn
+          </a>
+        </div>
+      </div>
+      
+      <div class="hidden md:block md:w-1/2 animate__animated animate__fadeInRight">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-teal-400/20 rounded-full filter blur-3xl"></div>
+          <div class="relative bg-neutral-800 p-8 rounded-lg shadow-2xl">
+            <div class="text-4xl mb-4">👨‍💻</div>
+            <h2 class="text-2xl font-bold mb-4">Expertise Areas</h2>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <span class="mr-2">▹</span> Full Stack Development
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2">▹</span> Data Engineering
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2">▹</span> Cloud Technologies
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2">▹</span> Data Visualization
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-gray-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="d65ec854-3e77-4735-9a22-4379746e68ef" data-section-id="d65ec854-3e77-4735-9a22-4379746e68ef">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">About Me</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-2xl font-bold text-neutral-800 mb-4">Full Stack Developer & Data Engineer</h3>
+            <p class="text-neutral-600 leading-relaxed mb-6">
+              I am passionate about designing and developing scalable, data-driven applications. With expertise spanning React.js, Spring Boot, and data engineering, I build robust web applications, create insightful data visualizations, and optimize backend performance.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-blue-600">🎯</span>
+                <span class="text-neutral-700">Problem-solving enthusiast</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-blue-600">☁️</span>
+                <span class="text-neutral-700">Cloud technology advocate</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-blue-600">⚡</span>
+                <span class="text-neutral-700">Automation specialist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeInRight">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div class="text-4xl mb-2">💻</div>
+              <h4 class="text-lg font-semibold text-neutral-800">Frontend</h4>
+              <p class="text-neutral-600">React.js specialist with modern UI expertise</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div class="text-4xl mb-2">⚙️</div>
+              <h4 class="text-lg font-semibold text-neutral-800">Backend</h4>
+              <p class="text-neutral-600">Spring Boot & REST API expert</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div class="text-4xl mb-2">📊</div>
+              <h4 class="text-lg font-semibold text-neutral-800">Data Engineering</h4>
+              <p class="text-neutral-600">Building scalable data solutions</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div class="text-4xl mb-2">🚀</div>
+              <h4 class="text-lg font-semibold text-neutral-800">Cloud</h4>
+              <p class="text-neutral-600">AWS & Azure implementation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="37cfe55b-6e7a-4f7b-a781-f9a85d83d391" data-section-id="37cfe55b-6e7a-4f7b-a781-f9a85d83d391">
+
+<htmlCode>
+<div id="root">
+  <section id="skills" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Programming & Development -->
+        <div class="bg-neutral-800 p-6 rounded-xl shadow-xl hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <div class="text-blue-500 text-3xl mb-4">💻</div>
+          <h3 class="text-xl font-bold mb-4">Programming & Development</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-gray-400 mb-2">Languages</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Java</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Python</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Frontend</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">React.js</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Ant Design</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">HTML/CSS</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">JavaScript</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Backend</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Spring Boot</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">REST APIs</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">JWT Auth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Cloud Technologies -->
+        <div class="bg-neutral-800 p-6 rounded-xl shadow-xl hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="text-blue-500 text-3xl mb-4">☁️</div>
+          <h3 class="text-xl font-bold mb-4">Data & Cloud Technologies</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-gray-400 mb-2">Databases</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">MySQL</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">SQL</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Cloud & DevOps</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">AWS</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Azure</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Data Visualization</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Power BI</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Qlik Sense</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Tools & Frameworks -->
+        <div class="bg-neutral-800 p-6 rounded-xl shadow-xl hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInRight">
+          <div class="text-blue-500 text-3xl mb-4">🛠️</div>
+          <h3 class="text-xl font-bold mb-4">Tools & Frameworks</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-gray-400 mb-2">API Documentation</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Swagger</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">OpenAPI</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Data Processing</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Apache POI</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-400 mb-2">Version Control</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">GitHub</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">Agile/Scrum</span>
+                <span class="px-3 py-1 bg-blue-600/20 rounded-full text-blue-400">SDLC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="1bb07d51-6ae6-4b71-ba46-356837cb92e8" data-section-id="1bb07d51-6ae6-4b71-ba46-356837cb92e8">
+
+<htmlCode>
+<div id="root">
+  <section id="experience" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Professional Experience</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Mindcoin Services -->
+        <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <div class="flex flex-wrap justify-between items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-neutral-800">Full Stack Developer</h3>
+              <p class="text-blue-600 font-medium">Mindcoin Services Private Limited</p>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">Feb 2024 – Present</span>
+          </div>
+          <ul class="space-y-3 text-neutral-600">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Developing React.js (Ant Design)-based frontend and Spring Boot backend for scalable applications
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Designing reusable components, managing state efficiently, and ensuring seamless API integration
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Working with MySQL for database design, query optimization, and performance enhancement
+            </li>
+          </ul>
+        </div>
+
+        <!-- Axiphyl -->
+        <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300 animate__animated animate__fadeInRight">
+          <div class="flex flex-wrap justify-between items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-neutral-800">Data Engineer</h3>
+              <p class="text-blue-600 font-medium">Axiphyl</p>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">July 2023 – Dec 2023</span>
+          </div>
+          <ul class="space-y-3 text-neutral-600">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Built a scalable data warehouse using Azure Blob Storage & Data Lake
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Developed Qlik Sense dashboards for analyzing patient data and identifying key trends
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Designed interactive data visualizations to improve data accessibility and decision-making
+            </li>
+          </ul>
+        </div>
+
+        <!-- AICTE -->
+        <div class="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <div class="flex flex-wrap justify-between items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-neutral-800">AWS Cloud Intern</h3>
+              <p class="text-blue-600 font-medium">AICTE</p>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">Mar 2022 – May 2022</span>
+          </div>
+          <ul class="space-y-3 text-neutral-600">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Implemented AWS IAM-based granular access control, reducing security risks
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Optimized AWS S3 storage costs, reducing expenses by 50% through lifecycle policies
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="53bcc4af-dc69-4703-b1fd-4dc5d13a9b7e" data-section-id="53bcc4af-dc69-4703-b1fd-4dc5d13a9b7e">
+
+<htmlCode>
+<div id="root">
+  <section id="projects" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- SOS CRY -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-2xl font-bold text-blue-400">SOS CRY</h3>
+            <a href="https://soscry.com/" target="_blank" class="text-blue-400 hover:text-blue-300">Visit Site ↗</a>
+          </div>
+          <p class="text-gray-300 mb-4">Emergency response mobile application for sending distress signals to nearby community members.</p>
+          <ul class="space-y-2 mb-6 text-gray-400">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Instant help relay system with location-based alerts
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Smart camera integration for security documentation
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              GPS-based member notification system
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Spring Boot</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Java</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">AWS</span>
+          </div>
+        </div>
+
+        <!-- AI Inspector -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInRight">
+          <h3 class="text-2xl font-bold text-blue-400 mb-4">AI Inspector</h3>
+          <p class="text-gray-300 mb-4">AI-powered monitoring system for footplate activities with geotagging capabilities.</p>
+          <ul class="space-y-2 mb-6 text-gray-400">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Real-time activity monitoring
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Automated counseling system
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Location-based tracking
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Spring Boot</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">JWT</span>
+          </div>
+        </div>
+
+        <!-- Healthcare Dashboard -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <h3 class="text-2xl font-bold text-blue-400 mb-4">Healthcare Dashboard</h3>
+          <p class="text-gray-300 mb-4">Data pipeline and visualization system for 67 healthcare clinics.</p>
+          <div class="bg-blue-900/20 rounded-lg p-4 mb-6">
+            <p class="text-blue-300 font-semibold">Impact Metrics:</p>
+            <ul class="text-gray-300">
+              <li>1.71M consultations processed</li>
+              <li>1.31M follow-ups tracked</li>
+              <li>1.23M tests analyzed</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Qlik Sense</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Azure</span>
+          </div>
+        </div>
+
+        <!-- Railway SFR -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInRight">
+          <h3 class="text-2xl font-bold text-blue-400 mb-4">Railway SFR Analysis</h3>
+          <p class="text-gray-300 mb-4">Real-time signal failure reporting and analysis system.</p>
+          <ul class="space-y-2 mb-6 text-gray-400">
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Live tracking system
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Automated report generation
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-500 mr-2">▹</span>
+              Failure pattern analysis
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">Spring Boot</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-blue-900/50 rounded-full text-sm">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center animate__animated animate__fadeIn">
+        <button class="group relative px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-300">
+          View More Projects
+          <span class="absolute -right-2 -top-2 w-3 h-3 bg-blue-400 rounded-full group-hover:animate-ping"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="80e7a140-0153-483d-ba12-9c5d3c937a4b" data-section-id="80e7a140-0153-483d-ba12-9c5d3c937a4b">
+
+<htmlCode>
+<div id="root">
+  <section id="certifications" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">Certifications</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Python Programming -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInLeft">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <div class="bg-blue-600 rounded-full p-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-neutral-800 ml-4">Python Programming</h3>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">Coursera</span>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center text-neutral-600">
+              <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Completed in 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL Basic & Intermediate -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInRight">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <div class="bg-blue-600 rounded-full p-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-neutral-800 ml-4">SQL Basic & Intermediate</h3>
+            </div>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">HackerRank</span>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center text-neutral-600">
+              <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Completed in 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center animate__animated animate__fadeIn">
+        <button class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 flex items-center mx-auto">
+          <span>View Credentials</span>
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="29008d68-2b5c-47fa-8501-5e5f582baa46" data-section-id="29008d68-2b5c-47fa-8501-5e5f582baa46">
+
+<htmlCode>
+<div id="root">
+  <section id="contact" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8 animate__animated animate__fadeInLeft">
+          <div class="flex items-center space-x-4">
+            <div class="bg-blue-600/20 p-4 rounded-full">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Location</h3>
+              <p class="text-gray-400">Pedaparimi, Guntur, AP</p>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div class="bg-blue-600/20 p-4 rounded-full">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Email</h3>
+              <a href="mailto:valivetiharsha328@gmail.com" class="text-blue-400 hover:text-blue-300">valivetiharsha328@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div class="bg-blue-600/20 p-4 rounded-full">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Phone</h3>
+              <a href="tel:+919182089972" class="text-blue-400 hover:text-blue-300">+91 9182089972</a>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <div class="bg-blue-600/20 p-4 rounded-full">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-1">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/valiveti-prudhivi-harsha-vardhan-056ba9233" target="_blank" class="text-blue-400 hover:text-blue-300">Connect with me</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="space-y-6 animate__animated animate__fadeInRight">
+          <div>
+            <label class="block text-sm font-medium mb-2">Name</label>
+            <input type="text" class="w-full px-4 py-3 bg-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Your Name">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" class="w-full px-4 py-3 bg-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="your@email.com">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Message</label>
+            <textarea class="w-full px-4 py-3 bg-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none h-32" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-colors duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="a98bc0ad-ef8b-4ec2-9c2c-8e8c71c2d6e1" data-section-id="a98bc0ad-ef8b-4ec2-9c2c-8e8c71c2d6e1">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold">Harsha Vardhan</h3>
+          <p class="text-gray-400">Full Stack Developer & Data Engineer</p>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/valiveti-prudhivi-harsha-vardhan-056ba9233" class="text-gray-400 hover:text-blue-400 transition-colors">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:valivetiharsha328@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+              <span class="sr-only">Email</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+            <a href="https://github.com" class="text-gray-400 hover:text-blue-400 transition-colors">
+              <span class="sr-only">GitHub</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
+            <li><a href="#skills" class="text-gray-400 hover:text-blue-400 transition-colors">Skills</a></li>
+            <li><a href="#experience" class="text-gray-400 hover:text-blue-400 transition-colors">Experience</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-blue-400 transition-colors">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>📍 Pedaparimi, Guntur, AP</li>
+            <li>📧 valivetiharsha328@gmail.com</li>
+            <li>📞 +91 9182089972</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="text-lg font-semibold">Newsletter</h4>
+          <form class="space-y-4">
+            <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-neutral-800 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition-colors duration-300">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-neutral-800 mt-12 pt-8 text-center text-gray-400">
+        <p>© 2024 Valiveti Prudhivi Harsha Vardhan Gupta. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
